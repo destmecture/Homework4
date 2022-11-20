@@ -11,11 +11,9 @@ public class Main {
         System.out.println("Введите возраст ");
         int age = in.nextInt();
 
-        if(age<=18){
-            System.out.println("Возраст совершеннолетия ещё не наступил, и нужно немного подождать");
-        }else{
-            System.out.println("Поздравляем с совершеннолетием");
-        }
+        String answer = age>=18 ? "Поздравляем с совершеннолетием":"Возраст совершеннолетия ещё не наступил, и нужно немного подождать";
+
+        System.out.println(answer);
 
         //task  2
         System.out.println("Task 2");
@@ -26,7 +24,7 @@ public class Main {
 
         if (personAge>=7&&personAge<18){
             System.out.println("Ребенок ходит в школу");
-        } else if (personAge>=18&&personAge<24) {
+        }else if (personAge>=18&&personAge<24) {
             System.out.println("Человек уже закончил школу и может отправляться в университет");
         }else if(personAge>24){
             System.out.println("Человек окончил университет и ему пора искать первую работу");
@@ -46,6 +44,56 @@ public class Main {
         }else{
             System.out.println("В вагоне нет мест");
         }
+
+        //second block task1
+        System.out.println("Second part, Task 1");
+
+        Scanner ageToPlace = new Scanner(System.in);
+        System.out.println("Введите ваш возраст");
+        int placeToGo =ageToPlace.nextInt();
+
+        if(placeToGo>=2 && placeToGo<=6){
+            System.out.println("Если ваш возраст "+placeToGo+" лет, то вам нужно ходить в детский сад");
+        } else if (placeToGo>=7&&placeToGo<18) {
+            System.out.println("Если ваш возраст "+placeToGo+" лет, то вам нужно ходить в школу");
+        } else if (placeToGo>=18&&placeToGo<24) {
+            System.out.println("Если ваш возраст "+placeToGo+" лет, то вам нужно ходить в университет");
+        }else{
+            System.out.println("Вам пора ходить на работу");
+        }
+
+        //task 2
+        System.out.println("Task 2");
+
+        Scanner accessToRide = new Scanner(System.in);
+        System.out.println("Введите ваш возраст");
+        int ageToAccess = accessToRide.nextInt();
+
+        if(ageToAccess<5){
+            System.out.println("Ты не можешь кататься на аттракционе");
+        } else if (ageToAccess>=5 && ageToAccess<14) {
+            System.out.println("Ты можешь кататься только в сопровождении взрослого");
+        }else{
+            System.out.println("ТЫ можешь кататься самостоятельно");
+        }
+        //task 3
+        System.out.println("Task 3");
+
+        Scanner oneFirst = new Scanner(System.in);
+        System.out.println("Введите первое число");
+        int one = oneFirst.nextInt();
+
+        Scanner twoFirst = new Scanner(System.in);
+        System.out.println("Введите второе число");
+        int two = twoFirst.nextInt();
+
+        Scanner freeFirst = new Scanner(System.in);
+        System.out.println("Введите третье число");
+        int free = freeFirst.nextInt();
+
+        int maxFirstTwo = Math.max(one, two);
+        System.out.println("Максимальное число "+Math.max(maxFirstTwo, free));
+
 
 
     }
